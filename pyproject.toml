@@ -1,0 +1,29 @@
+[project]
+name = "reflexlayer"
+version = "0.1.0"
+description = "Research code: session-level Learn-then-Test guard for answering agent decisions with a fast model"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Fatih Aydost"}]
+keywords = ["llm", "agents", "calibration", "conformal", "learn-then-test", "routing", "system-1"]
+classifiers = ["Development Status :: 2 - Pre-Alpha", "Intended Audience :: Science/Research"]
+requires-python = ">=3.12"
+dependencies = ["httpx>=0.27", "starlette>=0.37", "uvicorn>=0.30"]
+
+[project.scripts]
+rflx = "reflexlayer.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/reflexlayer"]
+
+[tool.pytest.ini_options]
+pythonpath = ["tests", "bench"]
+testpaths = ["tests"]

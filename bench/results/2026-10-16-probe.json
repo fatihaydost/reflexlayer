@@ -1,0 +1,1126 @@
+{
+  "prereg": {
+    "encoder": "jhu-clsp/mmBERT-base (frozen, fp16 autocast)",
+    "text": "context.conversation_tail exactly as the S1 saw it (digest left out: constant within a domain)",
+    "max_length": 2048,
+    "truncation_side": "left (keeps the newest turns; 0.4% of tails exceed 2048 tokens)",
+    "pooling": "mean over attention mask of last_hidden_state",
+    "head": "softmax regression over the domain's options, features standardised on train rows, AdamW lr 1e-2 wd 1e-2, 300 full-batch steps, seed-fixed init",
+    "variants": {
+      "tail": "mean-pool of the full tail (768-d)",
+      "tail+last": "tail \u2295 mean-pool of the newest turn alone (max 512 tokens), 1536-d"
+    },
+    "selection": "per domain, the variant with the lower mean NLL on calibrate rows over the primary split's seeds",
+    "splits": {
+      "primary": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "secondary": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "calib-heavy": [
+        0.2,
+        0.5,
+        0.3
+      ]
+    },
+    "split_rule": "per domain, tasks sorted then shuffled with random.Random(seed); train = first floor(n*f_train), calibrate = next floor(n*f_cal), test = rest; seeds 0..49",
+    "ltt": "reflexlayer.calibrate.ltt_threshold, sessions = task_id, bound hb and wsr, delta 0.1, alpha 0.05 and 0.10"
+  },
+  "delta": 0.1,
+  "seeds": 50,
+  "domains": {
+    "tau_airline_next_action": {
+      "rows": 2565,
+      "tasks": 43,
+      "options": 15,
+      "variants": {
+        "tail": {
+          "cal_nll_mean": 3.9050187253952027
+        },
+        "tail+last": {
+          "cal_nll_mean": 3.5353700351715087
+        }
+      },
+      "views": {
+        "primary": {
+          "fracs": [
+            0.4,
+            0.3,
+            0.3
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 12,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 41486,
+              "top1": 0.4132237381285253,
+              "share_ge_0.9": 0.46659113917948225,
+              "disagreement_ge_0.9": 0.47806994885571114,
+              "ece": 0.3857092104083305
+            },
+            "probe[tail+last]": {
+              "rows": 41486,
+              "top1": 0.48944222147230393,
+              "share_ge_0.9": 0.5461601504121872,
+              "disagreement_ge_0.9": 0.3853826463059405,
+              "ece": 0.34075363807067444
+            },
+            "jev-digest": {
+              "rows": 41486,
+              "top1": 0.646362628356554,
+              "share_ge_0.9": 0.329243600250687,
+              "disagreement_ge_0.9": 0.19423091002269566,
+              "ece": 0.15535023863472017
+            }
+          }
+        },
+        "secondary": {
+          "fracs": [
+            0.5,
+            0.25,
+            0.25
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 31,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 31,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 31,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 10,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 31,
+              "threshold_mean": null
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 35876,
+              "top1": 0.4244620359014383,
+              "share_ge_0.9": 0.4387334150964433,
+              "disagreement_ge_0.9": 0.4559085133418043,
+              "ece": 0.35955552190879697
+            },
+            "probe[tail+last]": {
+              "rows": 35876,
+              "top1": 0.5039859516111049,
+              "share_ge_0.9": 0.5294068458022076,
+              "disagreement_ge_0.9": 0.36439740957194755,
+              "ece": 0.3192325065782138
+            },
+            "jev-digest": {
+              "rows": 35876,
+              "top1": 0.6436336269372283,
+              "share_ge_0.9": 0.32896643995986175,
+              "disagreement_ge_0.9": 0.19988137603795966,
+              "ece": 0.15818039915263687
+            }
+          }
+        },
+        "calib-heavy": {
+          "fracs": [
+            0.2,
+            0.5,
+            0.3
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 21,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 29,
+              "threshold_mean": null
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 41486,
+              "top1": 0.38764884539362676,
+              "share_ge_0.9": 0.5358434170563564,
+              "disagreement_ge_0.9": 0.5218623481781377,
+              "ece": 0.4414860259846695
+            },
+            "probe[tail+last]": {
+              "rows": 41486,
+              "top1": 0.45627440582365136,
+              "share_ge_0.9": 0.6043966639348214,
+              "disagreement_ge_0.9": 0.43910026322086626,
+              "ece": 0.3970397078291472
+            },
+            "jev-digest": {
+              "rows": 41486,
+              "top1": 0.646362628356554,
+              "share_ge_0.9": 0.329243600250687,
+              "disagreement_ge_0.9": 0.19423091002269566,
+              "ece": 0.15535023863472017
+            }
+          }
+        }
+      },
+      "selected": "tail+last"
+    },
+    "tau_retail_next_action": {
+      "rows": 12301,
+      "tasks": 111,
+      "options": 17,
+      "variants": {
+        "tail": {
+          "cal_nll_mean": 1.4042593455314636
+        },
+        "tail+last": {
+          "cal_nll_mean": 1.3933166480064392
+        }
+      },
+      "views": {
+        "primary": {
+          "fracs": [
+            0.4,
+            0.3,
+            0.3
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.14014533353887698,
+              "pooled_disagreement": 0.006865422545895918,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.9746
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.1608131023447924,
+              "pooled_disagreement": 0.009090308078804708,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.9632
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.1621686273050569,
+              "pooled_disagreement": 0.010063264168879274,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": 0.9611999999999999
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.2630941053269473,
+              "pooled_disagreement": 0.032065140524922715,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.8968
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.1706154083319601,
+              "pooled_disagreement": 0.01118519441674975,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 33,
+              "threshold_mean": 0.956
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.3432720777805538,
+              "pooled_disagreement": 0.05283696729435084,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.84
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 188119,
+              "top1": 0.6203785901477257,
+              "share_ge_0.9": 0.35134675391640396,
+              "disagreement_ge_0.9": 0.1808608820636962,
+              "ece": 0.13117202466523853
+            },
+            "probe[tail+last]": {
+              "rows": 188119,
+              "top1": 0.6790435841143106,
+              "share_ge_0.9": 0.5529691312413951,
+              "disagreement_ge_0.9": 0.1890621395062678,
+              "ece": 0.16490985569772326
+            },
+            "jev-digest": {
+              "rows": 188119,
+              "top1": 0.7548413504218074,
+              "share_ge_0.9": 0.2580334788086265,
+              "disagreement_ge_0.9": 0.03030427885704868,
+              "ece": 0.022337775556961252
+            }
+          }
+        },
+        "secondary": {
+          "fracs": [
+            0.5,
+            0.25,
+            0.25
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.14613782564759817,
+              "pooled_disagreement": 0.007378673525319391,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 82,
+              "threshold_mean": 0.971
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.17829591107386686,
+              "pooled_disagreement": 0.012164777439867294,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 82,
+              "threshold_mean": 0.951
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.2675362926083849,
+              "pooled_disagreement": 0.03332642391579723,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 82,
+              "threshold_mean": 0.8936000000000001
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 27,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.3448537204544894,
+              "pooled_disagreement": 0.053745957439205246,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 82,
+              "threshold_mean": 0.8382
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 162292,
+              "top1": 0.6391750671628916,
+              "share_ge_0.9": 0.3250499100386957,
+              "disagreement_ge_0.9": 0.15714746080791614,
+              "ece": 0.10167977423409658
+            },
+            "probe[tail+last]": {
+              "rows": 162292,
+              "top1": 0.6929300273580953,
+              "share_ge_0.9": 0.5266741429029157,
+              "disagreement_ge_0.9": 0.16996782684995612,
+              "ece": 0.14249757362654963
+            },
+            "jev-digest": {
+              "rows": 162292,
+              "top1": 0.7548677692061223,
+              "share_ge_0.9": 0.2573694328740788,
+              "disagreement_ge_0.9": 0.03062079532667768,
+              "ece": 0.022849801592191816
+            }
+          }
+        },
+        "calib-heavy": {
+          "fracs": [
+            0.2,
+            0.5,
+            0.3
+          ],
+          "configs": {
+            "probe[tail] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail] a=0.1 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 hb": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "probe[tail+last] a=0.1 hb": {
+              "coverage": 0.00410378536989884,
+              "pooled_disagreement": 0.009067357512953367,
+              "held": 8,
+              "serving": 8,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": 1.0
+            },
+            "probe[tail+last] a=0.1 wsr": {
+              "coverage": 0.0053902051361106535,
+              "pooled_disagreement": 0.014792899408284023,
+              "held": 10,
+              "serving": 10,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": 1.0
+            },
+            "jev-digest a=0.05 hb": {
+              "coverage": 0.11563425278679984,
+              "pooled_disagreement": 0.0044131843883602265,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": 0.9876
+            },
+            "jev-digest (calib on train+cal) a=0.05 hb": {
+              "coverage": 0.14014533353887698,
+              "pooled_disagreement": 0.006865422545895918,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.9746
+            },
+            "jev-digest a=0.05 wsr": {
+              "coverage": 0.0,
+              "pooled_disagreement": null,
+              "held": 0,
+              "serving": 0,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": null
+            },
+            "jev-digest (calib on train+cal) a=0.05 wsr": {
+              "coverage": 0.1608131023447924,
+              "pooled_disagreement": 0.009090308078804708,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.9632
+            },
+            "jev-digest a=0.1 hb": {
+              "coverage": 0.232740977785338,
+              "pooled_disagreement": 0.024667108238357355,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": 0.9172
+            },
+            "jev-digest (calib on train+cal) a=0.1 hb": {
+              "coverage": 0.2630941053269473,
+              "pooled_disagreement": 0.032065140524922715,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.8968
+            },
+            "jev-digest a=0.1 wsr": {
+              "coverage": 0.2984068594878774,
+              "pooled_disagreement": 0.04098973920478837,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 55,
+              "threshold_mean": 0.8726
+            },
+            "jev-digest (calib on train+cal) a=0.1 wsr": {
+              "coverage": 0.3432720777805538,
+              "pooled_disagreement": 0.05283696729435084,
+              "held": 50,
+              "serving": 50,
+              "splits": 50,
+              "cal_sessions": 77,
+              "threshold_mean": 0.84
+            }
+          },
+          "quality_test_pooled": {
+            "probe[tail]": {
+              "rows": 188119,
+              "top1": 0.5620006485256672,
+              "share_ge_0.9": 0.42831930852279676,
+              "disagreement_ge_0.9": 0.2682842072603165,
+              "ece": 0.22033934272455202
+            },
+            "probe[tail+last]": {
+              "rows": 188119,
+              "top1": 0.6330088933068961,
+              "share_ge_0.9": 0.6077110764994498,
+              "disagreement_ge_0.9": 0.24644425394937108,
+              "ece": 0.22765430961784824
+            },
+            "jev-digest": {
+              "rows": 188119,
+              "top1": 0.7548413504218074,
+              "share_ge_0.9": 0.2580334788086265,
+              "disagreement_ge_0.9": 0.03030427885704868,
+              "ece": 0.022337775556961252
+            }
+          }
+        }
+      },
+      "selected": "tail+last"
+    }
+  }
+}

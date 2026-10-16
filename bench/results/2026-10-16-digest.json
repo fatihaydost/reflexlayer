@@ -1,0 +1,1194 @@
+{
+  "old calib=0.5": {
+    "results": {
+      "tau_airline_next_action": {
+        "agreement": {
+          "top1": 0.6401559454191034,
+          "share_ge_0.9": 0.33021442495126707,
+          "disagreement_ge_0.9": 0.15466351829988192
+        },
+        "rule": {
+          "rows": 2565,
+          "blocked": 185,
+          "blocked_agreeing": 69,
+          "hi_conf_disagreements": 131,
+          "hi_conf_disagreements_blocked": 18
+        },
+        "nowrite": {
+          "rows": 2565,
+          "blocked": 313,
+          "blocked_agreeing": 167,
+          "hi_conf_disagreements": 131,
+          "hi_conf_disagreements_blocked": 24
+        },
+        "tasks_per_kind": {
+          "tool": 42,
+          "user": 43
+        },
+        "rows_per_kind": {
+          "tool": 1252,
+          "user": 1313
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "agreement": {
+          "top1": 0.7449800829200878,
+          "share_ge_0.9": 0.3523290789366718,
+          "disagreement_ge_0.9": 0.06714351638209506
+        },
+        "rule": {
+          "rows": 12301,
+          "blocked": 880,
+          "blocked_agreeing": 181,
+          "hi_conf_disagreements": 291,
+          "hi_conf_disagreements_blocked": 44
+        },
+        "nowrite": {
+          "rows": 12301,
+          "blocked": 2141,
+          "blocked_agreeing": 1138,
+          "hi_conf_disagreements": 291,
+          "hi_conf_disagreements_blocked": 158
+        },
+        "tasks_per_kind": {
+          "tool": 111,
+          "user": 111
+        },
+        "rows_per_kind": {
+          "tool": 6645,
+          "user": 5656
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.0023990094412629625,
+            "pooled_disagreement": 0.01806451612903226,
+            "held": 1,
+            "held_task_avg": 1,
+            "serving": 1,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0024718527732593373,
+                "threshold_splits": 1
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.19932272375137244,
+            "pooled_disagreement": 0.027167296725828155,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.199113322489076,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.022329876764668615,
+            "pooled_disagreement": 0.02096890817064353,
+            "held": 11,
+            "held_task_avg": 11,
+            "serving": 11,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.022055305712372023,
+                "threshold_splits": 11
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.2201480138536296,
+            "pooled_disagreement": 0.026157145755441556,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.22009377093101137,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.28991313001332697,
+            "pooled_disagreement": 0.04640825622462564,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.289889324785507,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.28541189690613833,
+            "pooled_disagreement": 0.04291403767843559,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.28510190412400727,
+                "threshold_splits": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "alphas": [
+      0.05,
+      0.1
+    ],
+    "delta": 0.1,
+    "splits": 50,
+    "calib_frac": 0.5,
+    "pred": "bench/data/pred-jev.jsonl"
+  },
+  "old calib=0.7": {
+    "results": {
+      "tau_airline_next_action": {
+        "agreement": {
+          "top1": 0.6401559454191034,
+          "share_ge_0.9": 0.33021442495126707,
+          "disagreement_ge_0.9": 0.15466351829988192
+        },
+        "rule": {
+          "rows": 2565,
+          "blocked": 185,
+          "blocked_agreeing": 69,
+          "hi_conf_disagreements": 131,
+          "hi_conf_disagreements_blocked": 18
+        },
+        "nowrite": {
+          "rows": 2565,
+          "blocked": 313,
+          "blocked_agreeing": 167,
+          "hi_conf_disagreements": 131,
+          "hi_conf_disagreements_blocked": 24
+        },
+        "tasks_per_kind": {
+          "tool": 42,
+          "user": 43
+        },
+        "rows_per_kind": {
+          "tool": 1252,
+          "user": 1313
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "agreement": {
+          "top1": 0.7449800829200878,
+          "share_ge_0.9": 0.3523290789366718,
+          "disagreement_ge_0.9": 0.06714351638209506
+        },
+        "rule": {
+          "rows": 12301,
+          "blocked": 880,
+          "blocked_agreeing": 181,
+          "hi_conf_disagreements": 291,
+          "hi_conf_disagreements_blocked": 44
+        },
+        "nowrite": {
+          "rows": 12301,
+          "blocked": 2141,
+          "blocked_agreeing": 1138,
+          "hi_conf_disagreements": 291,
+          "hi_conf_disagreements_blocked": 158
+        },
+        "tasks_per_kind": {
+          "tool": 111,
+          "user": 111
+        },
+        "rows_per_kind": {
+          "tool": 6645,
+          "user": 5656
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.051372949959214584,
+            "pooled_disagreement": 0.01998565132725223,
+            "held": 22,
+            "held_task_avg": 22,
+            "serving": 22,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.051866106028630815,
+                "threshold_splits": 22
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.2622446454659373,
+            "pooled_disagreement": 0.03839374354194947,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.26237115868147287,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.06548594973490826,
+            "pooled_disagreement": 0.02623645400472582,
+            "held": 26,
+            "held_task_avg": 26,
+            "serving": 26,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.06524061896990735,
+                "threshold_splits": 26
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.24511249621563774,
+            "pooled_disagreement": 0.03647132845891823,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.24500980762177132,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.09975774929533747,
+            "pooled_disagreement": 0.012723995334535044,
+            "held": 44,
+            "held_task_avg": 44,
+            "serving": 44,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.10026632078631079,
+                "threshold_splits": 44
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.32731966251289263,
+            "pooled_disagreement": 0.06208667110800579,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.32714930442964296,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.12258161264862574,
+            "pooled_disagreement": 0.019975734465724933,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.12267766679601741,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.3460847560153631,
+            "pooled_disagreement": 0.05920152500422758,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.34578644368724054,
+                "threshold_splits": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "alphas": [
+      0.05,
+      0.1
+    ],
+    "delta": 0.1,
+    "splits": 50,
+    "calib_frac": 0.7,
+    "pred": "bench/data/pred-jev.jsonl"
+  },
+  "digest calib=0.5": {
+    "results": {
+      "tau_airline_next_action": {
+        "agreement": {
+          "top1": 0.642495126705653,
+          "share_ge_0.9": 0.3267056530214425,
+          "disagreement_ge_0.9": 0.19809069212410502
+        },
+        "rule": {
+          "rows": 2565,
+          "blocked": 47,
+          "blocked_agreeing": 42,
+          "hi_conf_disagreements": 166,
+          "hi_conf_disagreements_blocked": 0
+        },
+        "nowrite": {
+          "rows": 2565,
+          "blocked": 139,
+          "blocked_agreeing": 126,
+          "hi_conf_disagreements": 166,
+          "hi_conf_disagreements_blocked": 1
+        },
+        "tasks_per_kind": {
+          "tool": 42,
+          "user": 43
+        },
+        "rows_per_kind": {
+          "tool": 1252,
+          "user": 1313
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "agreement": {
+          "top1": 0.7572555076823022,
+          "share_ge_0.9": 0.25957239248841557,
+          "disagreement_ge_0.9": 0.029752583777012214
+        },
+        "rule": {
+          "rows": 12301,
+          "blocked": 189,
+          "blocked_agreeing": 141,
+          "hi_conf_disagreements": 95,
+          "hi_conf_disagreements_blocked": 0
+        },
+        "nowrite": {
+          "rows": 12301,
+          "blocked": 1109,
+          "blocked_agreeing": 960,
+          "hi_conf_disagreements": 95,
+          "hi_conf_disagreements_blocked": 16
+        },
+        "tasks_per_kind": {
+          "tool": 111,
+          "user": 111
+        },
+        "rows_per_kind": {
+          "tool": 6645,
+          "user": 5656
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.11417360032203988,
+            "pooled_disagreement": 0.003518079017171576,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.11423149299907505,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.2336970770021589,
+            "pooled_disagreement": 0.02437526442931037,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.23369693490256116,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.1072048967212555,
+            "pooled_disagreement": 0.004104943780117794,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.107224189072816,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.20072394347450911,
+            "pooled_disagreement": 0.02382882668065557,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.20064108697732275,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.30483022669486737,
+            "pooled_disagreement": 0.04248212023162546,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.30459286192708834,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.25374744963825935,
+            "pooled_disagreement": 0.04067792345051461,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.2534940835007814,
+                "threshold_splits": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "alphas": [
+      0.05,
+      0.1
+    ],
+    "delta": 0.1,
+    "splits": 50,
+    "calib_frac": 0.5,
+    "pred": "bench/data/pred-jev-digest.jsonl"
+  },
+  "digest calib=0.7": {
+    "results": {
+      "tau_airline_next_action": {
+        "agreement": {
+          "top1": 0.642495126705653,
+          "share_ge_0.9": 0.3267056530214425,
+          "disagreement_ge_0.9": 0.19809069212410502
+        },
+        "rule": {
+          "rows": 2565,
+          "blocked": 47,
+          "blocked_agreeing": 42,
+          "hi_conf_disagreements": 166,
+          "hi_conf_disagreements_blocked": 0
+        },
+        "nowrite": {
+          "rows": 2565,
+          "blocked": 139,
+          "blocked_agreeing": 126,
+          "hi_conf_disagreements": 166,
+          "hi_conf_disagreements_blocked": 1
+        },
+        "tasks_per_kind": {
+          "tool": 42,
+          "user": 43
+        },
+        "rows_per_kind": {
+          "tool": 1252,
+          "user": 1313
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "held": 0,
+            "held_task_avg": 0,
+            "serving": 0,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.0,
+                "threshold_splits": 0
+              }
+            }
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "agreement": {
+          "top1": 0.7572555076823022,
+          "share_ge_0.9": 0.25957239248841557,
+          "disagreement_ge_0.9": 0.029752583777012214
+        },
+        "rule": {
+          "rows": 12301,
+          "blocked": 189,
+          "blocked_agreeing": 141,
+          "hi_conf_disagreements": 95,
+          "hi_conf_disagreements_blocked": 0
+        },
+        "nowrite": {
+          "rows": 12301,
+          "blocked": 1109,
+          "blocked_agreeing": 960,
+          "hi_conf_disagreements": 95,
+          "hi_conf_disagreements_blocked": 16
+        },
+        "tasks_per_kind": {
+          "tool": 111,
+          "user": 111
+        },
+        "rows_per_kind": {
+          "tool": 6645,
+          "user": 5656
+        },
+        "results": {
+          "baseline a=0.05": {
+            "coverage": 0.1401838101257141,
+            "pooled_disagreement": 0.006865422545895918,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.14014533353887698,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "baseline a=0.1": {
+            "coverage": 0.263165857332658,
+            "pooled_disagreement": 0.032065140524922715,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.2630941053269473,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.05": {
+            "coverage": 0.1278037464798472,
+            "pooled_disagreement": 0.006989224944876649,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.12777550380344357,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite a=0.1": {
+            "coverage": 0.22166416499468714,
+            "pooled_disagreement": 0.031207272901724675,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.22160972575869528,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "wsr a=0.05": {
+            "coverage": 0.16083551494878845,
+            "pooled_disagreement": 0.009090308078804708,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.1608131023447924,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "wsr a=0.1": {
+            "coverage": 0.34353566655082673,
+            "pooled_disagreement": 0.05283696729435084,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.3432720777805538,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.05": {
+            "coverage": 0.14480676672159007,
+            "pooled_disagreement": 0.009362264566582222,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.14478601310872374,
+                "threshold_splits": 50
+              }
+            }
+          },
+          "nowrite+wsr a=0.1": {
+            "coverage": 0.28941008468011375,
+            "pooled_disagreement": 0.05196213583310357,
+            "held": 50,
+            "held_task_avg": 50,
+            "serving": 50,
+            "splits": 50,
+            "sub": {
+              "all": {
+                "coverage": 0.28920523711055235,
+                "threshold_splits": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "alphas": [
+      0.05,
+      0.1
+    ],
+    "delta": 0.1,
+    "splits": 50,
+    "calib_frac": 0.7,
+    "pred": "bench/data/pred-jev-digest.jsonl"
+  }
+}

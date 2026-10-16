@@ -1,0 +1,423 @@
+{
+  "results": {
+    "jev": {
+      "tau_airline_next_action": {
+        "n": 2565,
+        "majority_label": "respond",
+        "majority_share": 0.46237816764132555,
+        "tasks": 43,
+        "splits": 50,
+        "delta": 0.1,
+        "accuracy": 0.6401559454191034,
+        "p_max_quantiles": {
+          "p10": 0.5,
+          "p50": 0.8,
+          "p90": 0.99
+        },
+        "share_ge_grid_floor": 0.9001949317738791,
+        "methods": {
+          "fixed 0.8": {
+            "threshold_mean": 0.8,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.5183213141052738,
+            "pooled_disagreement": 0.2122583911606159,
+            "disagreement_p10": 0.17864919810255253,
+            "disagreement_p90": 0.23798064680417622,
+            "disagreement_mean_unweighted": 0.21157342355832318,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.9": {
+            "threshold_mean": 0.9,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.3352484553219759,
+            "pooled_disagreement": 0.15631050059924403,
+            "disagreement_p10": 0.1199279711884754,
+            "disagreement_p90": 0.18737290306622734,
+            "disagreement_mean_unweighted": 0.15505471172662585,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.95": {
+            "threshold_mean": 0.95,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.21657993496654432,
+            "pooled_disagreement": 0.08800456425616887,
+            "disagreement_p10": 0.05669302241854411,
+            "disagreement_p90": 0.11387362362862453,
+            "disagreement_mean_unweighted": 0.08636445817752961,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "LTT a=0.02": {
+            "threshold_mean": 0.9866666666666667,
+            "no_threshold_share": 0.94,
+            "served_in_share": 0.06,
+            "coverage_mean": 0.007132796656160808,
+            "pooled_disagreement": 0.08057851239669421,
+            "disagreement_p10": 0.07828947368421052,
+            "disagreement_p90": 0.0843609022556391,
+            "disagreement_mean_unweighted": 0.08092888471177945,
+            "held_when_serving": 0.0,
+            "held_count": 0,
+            "serving_count": 3,
+            "held_or_abstained_share": 0.94
+          },
+          "LTT a=0.05": {
+            "threshold_mean": 0.98,
+            "no_threshold_share": 0.58,
+            "served_in_share": 0.42,
+            "coverage_mean": 0.060210479559428376,
+            "pooled_disagreement": 0.07180650037792895,
+            "disagreement_p10": 0.06435643564356436,
+            "disagreement_p90": 0.078125,
+            "disagreement_mean_unweighted": 0.0713656782871569,
+            "held_when_serving": 0.0,
+            "held_count": 0,
+            "serving_count": 21,
+            "held_or_abstained_share": 0.58
+          },
+          "LTT a=0.1": {
+            "threshold_mean": 0.9575,
+            "no_threshold_share": 0.36,
+            "served_in_share": 0.64,
+            "coverage_mean": 0.13038916863809044,
+            "pooled_disagreement": 0.11542045189843932,
+            "disagreement_p10": 0.022145548867028828,
+            "disagreement_p90": 0.15616584564860428,
+            "disagreement_mean_unweighted": 0.09748262611625468,
+            "held_when_serving": 0.5,
+            "held_count": 16,
+            "serving_count": 32,
+            "held_or_abstained_share": 0.68
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "n": 12301,
+        "majority_label": "respond",
+        "majority_share": 0.4550849524428908,
+        "tasks": 111,
+        "splits": 50,
+        "delta": 0.1,
+        "accuracy": 0.7449800829200878,
+        "p_max_quantiles": {
+          "p10": 0.52,
+          "p50": 0.81,
+          "p90": 1.0
+        },
+        "share_ge_grid_floor": 0.9302495732054304,
+        "methods": {
+          "fixed 0.8": {
+            "threshold_mean": 0.8,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.5203599111585222,
+            "pooled_disagreement": 0.11531763551631101,
+            "disagreement_p10": 0.10766390487921926,
+            "disagreement_p90": 0.12183979212389849,
+            "disagreement_mean_unweighted": 0.11530141694365556,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.9": {
+            "threshold_mean": 0.9,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.35049721484312263,
+            "pooled_disagreement": 0.06613255644573926,
+            "disagreement_p10": 0.059922009608437084,
+            "disagreement_p90": 0.07337971588591953,
+            "disagreement_mean_unweighted": 0.06611380265924877,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.95": {
+            "threshold_mean": 0.95,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.26948419071263713,
+            "pooled_disagreement": 0.03746803674590397,
+            "disagreement_p10": 0.029462975376965125,
+            "disagreement_p90": 0.04444051411362038,
+            "disagreement_mean_unweighted": 0.037423316791990804,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "LTT a=0.02": {
+            "threshold_mean": 0.9875,
+            "no_threshold_share": 0.84,
+            "served_in_share": 0.16,
+            "coverage_mean": 0.030016649064686124,
+            "pooled_disagreement": 0.02906603975208378,
+            "disagreement_p10": 0.025159216219988834,
+            "disagreement_p90": 0.035834245635294956,
+            "disagreement_mean_unweighted": 0.028798527746187623,
+            "held_when_serving": 0.0,
+            "held_count": 0,
+            "serving_count": 8,
+            "held_or_abstained_share": 0.84
+          },
+          "LTT a=0.05": {
+            "threshold_mean": 0.9508,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.26477874146554775,
+            "pooled_disagreement": 0.03836884218644558,
+            "disagreement_p10": 0.02048203245902313,
+            "disagreement_p90": 0.049805497505283416,
+            "disagreement_mean_unweighted": 0.037502990328626626,
+            "held_when_serving": 0.9,
+            "held_count": 45,
+            "serving_count": 50,
+            "held_or_abstained_share": 0.9
+          },
+          "LTT a=0.1": {
+            "threshold_mean": 0.8502,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.43585369191828865,
+            "pooled_disagreement": 0.08898019569930275,
+            "disagreement_p10": 0.07177410257366626,
+            "disagreement_p90": 0.10121633065228466,
+            "disagreement_mean_unweighted": 0.0885271551416596,
+            "held_when_serving": 0.84,
+            "held_count": 42,
+            "serving_count": 50,
+            "held_or_abstained_share": 0.84
+          }
+        }
+      }
+    },
+    "laya": {
+      "tau_airline_next_action": {
+        "n": 2565,
+        "majority_label": "respond",
+        "majority_share": 0.46237816764132555,
+        "tasks": 43,
+        "splits": 50,
+        "delta": 0.1,
+        "accuracy": 0.08732943469785576,
+        "p_max_quantiles": {
+          "p10": 0.6266,
+          "p50": 0.9974,
+          "p90": 1.0
+        },
+        "share_ge_grid_floor": 0.9512670565302144,
+        "methods": {
+          "fixed 0.8": {
+            "threshold_mean": 0.8,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.8202583497818975,
+            "pooled_disagreement": 0.9101835828756302,
+            "disagreement_p10": 0.891231932932874,
+            "disagreement_p90": 0.9277390389641373,
+            "disagreement_mean_unweighted": 0.910307909776038,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.9": {
+            "threshold_mean": 0.9,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.7489559005781868,
+            "pooled_disagreement": 0.9063085700162709,
+            "disagreement_p10": 0.8850969855705573,
+            "disagreement_p90": 0.9239670941968041,
+            "disagreement_mean_unweighted": 0.9065385563489367,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.95": {
+            "threshold_mean": 0.95,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.6799983535017637,
+            "pooled_disagreement": 0.9018602540834846,
+            "disagreement_p10": 0.8783012844126821,
+            "disagreement_p90": 0.9210971268751589,
+            "disagreement_mean_unweighted": 0.902299590964618,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "LTT a=0.02": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          },
+          "LTT a=0.05": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          },
+          "LTT a=0.1": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          }
+        }
+      },
+      "tau_retail_next_action": {
+        "n": 12301,
+        "majority_label": "respond",
+        "majority_share": 0.4550849524428908,
+        "tasks": 111,
+        "splits": 50,
+        "delta": 0.1,
+        "accuracy": 0.1037314039508983,
+        "p_max_quantiles": {
+          "p10": 0.5859,
+          "p50": 0.9995,
+          "p90": 1.0
+        },
+        "share_ge_grid_floor": 0.9470774733761482,
+        "methods": {
+          "fixed 0.8": {
+            "threshold_mean": 0.8,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.7966639538935403,
+            "pooled_disagreement": 0.898130204996797,
+            "disagreement_p10": 0.8926104458499529,
+            "disagreement_p90": 0.903843078480757,
+            "disagreement_mean_unweighted": 0.8981700077668051,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.9": {
+            "threshold_mean": 0.9,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.7387592396228928,
+            "pooled_disagreement": 0.8982521739881348,
+            "disagreement_p10": 0.8918896062407508,
+            "disagreement_p90": 0.9039058577143338,
+            "disagreement_mean_unweighted": 0.8983004235841006,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "fixed 0.95": {
+            "threshold_mean": 0.95,
+            "no_threshold_share": 0.0,
+            "served_in_share": 1.0,
+            "coverage_mean": 0.692852771062716,
+            "pooled_disagreement": 0.8979195344618827,
+            "disagreement_p10": 0.8916116477449418,
+            "disagreement_p90": 0.9039767764053914,
+            "disagreement_mean_unweighted": 0.8979681021126987,
+            "held_when_serving": null,
+            "held_count": null,
+            "serving_count": null,
+            "held_or_abstained_share": null
+          },
+          "LTT a=0.02": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          },
+          "LTT a=0.05": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          },
+          "LTT a=0.1": {
+            "threshold_mean": null,
+            "no_threshold_share": 1.0,
+            "served_in_share": 0.0,
+            "coverage_mean": 0.0,
+            "pooled_disagreement": null,
+            "disagreement_p10": null,
+            "disagreement_p90": null,
+            "disagreement_mean_unweighted": null,
+            "held_when_serving": null,
+            "held_count": 0,
+            "serving_count": 0,
+            "held_or_abstained_share": 1
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "jev": 0,
+    "laya": 0
+  },
+  "alphas": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "delta": 0.1,
+  "splits": 50
+}

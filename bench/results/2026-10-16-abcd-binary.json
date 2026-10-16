@@ -1,0 +1,1003 @@
+{
+  "results": {
+    "official": {
+      "reference": {
+        "button_or_reply_after_action": {
+          "n": 153,
+          "s1_correct": 82,
+          "hi_n": 19,
+          "hi_wrong": 2,
+          "majority_correct": 123,
+          "last_correct": 123,
+          "s1_top1": 0.5359477124183006,
+          "majority": 0.803921568627451,
+          "last_button": 0.803921568627451,
+          "hi_share": 0.12418300653594772,
+          "hi_disagreement": 0.10526315789473684
+        },
+        "button_or_reply_after_agent": {
+          "n": 149,
+          "s1_correct": 94,
+          "hi_n": 35,
+          "hi_wrong": 10,
+          "majority_correct": 98,
+          "last_correct": 98,
+          "s1_top1": 0.6308724832214765,
+          "majority": 0.6577181208053692,
+          "last_button": 0.6577181208053692,
+          "hi_share": 0.2348993288590604,
+          "hi_disagreement": 0.2857142857142857
+        },
+        "button_or_reply_after_customer": {
+          "n": 370,
+          "s1_correct": 264,
+          "hi_n": 80,
+          "hi_wrong": 15,
+          "majority_correct": 265,
+          "last_correct": 265,
+          "s1_top1": 0.7135135135135136,
+          "majority": 0.7162162162162162,
+          "last_button": 0.7162162162162162,
+          "hi_share": 0.21621621621621623,
+          "hi_disagreement": 0.1875
+        },
+        "button_or_reply_after_none": {
+          "n": 46,
+          "s1_correct": 46,
+          "hi_n": 0,
+          "hi_wrong": 0,
+          "majority_correct": 46,
+          "last_correct": 46,
+          "s1_top1": 1.0,
+          "majority": 1.0,
+          "last_button": 1.0,
+          "hi_share": 0.0,
+          "hi_disagreement": null
+        },
+        "total": {
+          "n": 718,
+          "s1_correct": 486,
+          "hi_n": 134,
+          "hi_wrong": 27,
+          "majority_correct": 532,
+          "last_correct": 532,
+          "s1_top1": 0.6768802228412256,
+          "majority": 0.7409470752089137,
+          "last_button": 0.7409470752089137,
+          "hi_share": 0.18662952646239556,
+          "hi_disagreement": 0.20149253731343283
+        }
+      },
+      "methods": {
+        "fixed 0.8": {
+          "button_or_reply_after_action": {
+            "coverage": 0.37254901960784315,
+            "pooled_disagreement": 0.2807017543859649,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.44966442953020136,
+            "pooled_disagreement": 0.2835820895522388,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.42162162162162165,
+            "pooled_disagreement": 0.20512820512820512,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "total": {
+            "coverage": 0.38997214484679665,
+            "pooled_disagreement": 0.2392857142857143,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "fixed 0.9": {
+          "button_or_reply_after_action": {
+            "coverage": 0.12418300653594772,
+            "pooled_disagreement": 0.10526315789473684,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.2348993288590604,
+            "pooled_disagreement": 0.2857142857142857,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.21621621621621623,
+            "pooled_disagreement": 0.1875,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "total": {
+            "coverage": 0.18662952646239556,
+            "pooled_disagreement": 0.20149253731343283,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "fixed 0.95": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0196078431372549,
+            "pooled_disagreement": 0.3333333333333333,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.10738255033557047,
+            "pooled_disagreement": 0.3125,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.11891891891891893,
+            "pooled_disagreement": 0.25,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "total": {
+            "coverage": 0.08774373259052924,
+            "pooled_disagreement": 0.2698412698412698,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.02": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.05": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 1.0,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.06406685236768803,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.1": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 1.0,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.06406685236768803,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.02": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.05": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.1": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 1,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 1.0,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.06406685236768803,
+            "pooled_disagreement": 0.0,
+            "served_in": 1,
+            "splits": 1,
+            "held_rows": 1,
+            "held": 1,
+            "threshold_mean": null
+          }
+        }
+      },
+      "splits": 1
+    },
+    "random": {
+      "reference": {
+        "button_or_reply_after_action": {
+          "n": 11442,
+          "s1_correct": 6558,
+          "hi_n": 1467,
+          "hi_wrong": 245,
+          "majority_correct": 8923,
+          "last_correct": 8923,
+          "s1_top1": 0.5731515469323545,
+          "majority": 0.7798461807376332,
+          "last_button": 0.7798461807376332,
+          "hi_share": 0.1282118510749869,
+          "hi_disagreement": 0.16700749829584186
+        },
+        "button_or_reply_after_agent": {
+          "n": 9682,
+          "s1_correct": 6528,
+          "hi_n": 1944,
+          "hi_wrong": 567,
+          "majority_correct": 6482,
+          "last_correct": 6482,
+          "s1_top1": 0.6742408593265854,
+          "majority": 0.6694897748399091,
+          "last_button": 0.6694897748399091,
+          "hi_share": 0.20078496178475522,
+          "hi_disagreement": 0.2916666666666667
+        },
+        "button_or_reply_after_customer": {
+          "n": 25603,
+          "s1_correct": 18179,
+          "hi_n": 5395,
+          "hi_wrong": 1194,
+          "majority_correct": 17590,
+          "last_correct": 17590,
+          "s1_top1": 0.7100339803929228,
+          "majority": 0.6870288638050228,
+          "last_button": 0.6870288638050228,
+          "hi_share": 0.21071749404366677,
+          "hi_disagreement": 0.22131603336422614
+        },
+        "button_or_reply_after_none": {
+          "n": 3349,
+          "s1_correct": 3349,
+          "hi_n": 0,
+          "hi_wrong": 0,
+          "majority_correct": 3349,
+          "last_correct": 3349,
+          "s1_top1": 1.0,
+          "majority": 1.0,
+          "last_button": 1.0,
+          "hi_share": 0.0,
+          "hi_disagreement": null
+        },
+        "total": {
+          "n": 50076,
+          "s1_correct": 34614,
+          "hi_n": 8806,
+          "hi_wrong": 2006,
+          "majority_correct": 36344,
+          "last_correct": 36344,
+          "s1_top1": 0.6912293314162473,
+          "majority": 0.7257768192347631,
+          "last_button": 0.7257768192347631,
+          "hi_share": 0.17585270389008706,
+          "hi_disagreement": 0.2277992277992278
+        }
+      },
+      "methods": {
+        "fixed 0.8": {
+          "button_or_reply_after_action": {
+            "coverage": 0.34311043836491983,
+            "pooled_disagreement": 0.2443312101910828,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.4550796579456966,
+            "pooled_disagreement": 0.24801452235080554,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.4159381851100911,
+            "pooled_disagreement": 0.21444674055983468,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.8
+          },
+          "total": {
+            "coverage": 0.3790550120226854,
+            "pooled_disagreement": 0.22842238381283592,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "fixed 0.9": {
+          "button_or_reply_after_action": {
+            "coverage": 0.12829041219751924,
+            "pooled_disagreement": 0.16700749829584186,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.2008118472915259,
+            "pooled_disagreement": 0.2916666666666667,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.21078925718438585,
+            "pooled_disagreement": 0.22131603336422614,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.9
+          },
+          "total": {
+            "coverage": 0.17590659096138725,
+            "pooled_disagreement": 0.2277992277992278,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "fixed 0.95": {
+          "button_or_reply_after_action": {
+            "coverage": 0.030456036438415872,
+            "pooled_disagreement": 0.1206896551724138,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.1035643452772689,
+            "pooled_disagreement": 0.40079760717846463,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.11343707783873166,
+            "pooled_disagreement": 0.21081639683086462,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": 0.95
+          },
+          "total": {
+            "coverage": 0.08497540430013309,
+            "pooled_disagreement": 0.24823695345557123,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": null,
+            "held": null,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.02": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.05": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.6,
+            "pooled_disagreement": 0.0,
+            "served_in": 12,
+            "splits": 20,
+            "held_rows": 12,
+            "held": 12,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.04001807979151431,
+            "pooled_disagreement": 0.0,
+            "served_in": 12,
+            "splits": 20,
+            "held_rows": 12,
+            "held": 12,
+            "threshold_mean": null
+          }
+        },
+        "LTT-hb a=0.1": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 1.0,
+            "pooled_disagreement": 0.0,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": 20,
+            "held": 20,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.06689583686361636,
+            "pooled_disagreement": 0.0,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": 20,
+            "held": 20,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.02": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.05": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "total": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          }
+        },
+        "LTT-wsr a=0.1": {
+          "button_or_reply_after_action": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_agent": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_customer": {
+            "coverage": 0.0,
+            "pooled_disagreement": null,
+            "served_in": 0,
+            "splits": 20,
+            "held_rows": 0,
+            "held": 0,
+            "threshold_mean": null
+          },
+          "button_or_reply_after_none": {
+            "coverage": 1.0,
+            "pooled_disagreement": 0.0,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": 20,
+            "held": 20,
+            "threshold_mean": 0.5
+          },
+          "total": {
+            "coverage": 0.06689583686361636,
+            "pooled_disagreement": 0.0,
+            "served_in": 20,
+            "splits": 20,
+            "held_rows": 20,
+            "held": 20,
+            "threshold_mean": null
+          }
+        }
+      },
+      "splits": 20
+    }
+  },
+  "failed": 0,
+  "alphas": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "delta": 0.1,
+  "splits": 20,
+  "pred": "bench/data/pred-abcd-binary-jev.jsonl"
+}

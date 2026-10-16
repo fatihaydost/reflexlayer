@@ -1,0 +1,89 @@
+{
+ "n": 208,
+ "majority": "reply",
+ "majority_acc": 0.7355769230769231,
+ "jev_top1": 0.6538461538461539,
+ "models": {
+  "llama": {
+   "ok": 208,
+   "err": 0,
+   "reasons": {},
+   "top1_ok": 0.5961538461538461,
+   "top1_all": 0.5961538461538461,
+   "cost": 0.00366408,
+   "per_dec": 1.761576923076923e-05,
+   "hi_cov": 0.0,
+   "hi_dis": null,
+   "pred_button": 0.28365384615384615,
+   "keys": [
+    "choice",
+    "cost",
+    "decision_type",
+    "error",
+    "i",
+    "label",
+    "ms",
+    "p_max",
+    "probs",
+    "task_id"
+   ],
+   "jev_on_ok": 0.6538461538461539,
+   "maj_on_ok": 0.7355769230769231
+  },
+  "gemma": {
+   "ok": 208,
+   "err": 0,
+   "reasons": {},
+   "top1_ok": 0.6586538461538461,
+   "top1_all": 0.6586538461538461,
+   "cost": 0.0032243,
+   "per_dec": 1.5501442307692306e-05,
+   "hi_cov": 0.7836538461538461,
+   "hi_dis": 0.2822085889570552,
+   "pred_button": 0.4230769230769231,
+   "keys": [
+    "choice",
+    "cost",
+    "decision_type",
+    "error",
+    "i",
+    "label",
+    "ms",
+    "p_max",
+    "probs",
+    "task_id"
+   ],
+   "jev_on_ok": 0.6538461538461539,
+   "maj_on_ok": 0.7355769230769231
+  },
+  "qwen3": {
+   "ok": 154,
+   "err": 54,
+   "reasons": {
+    "S1Error: HTTPStatusError": 49,
+    "S1Error: no_logprobs": 5
+   },
+   "top1_ok": 0.6948051948051948,
+   "top1_all": 0.5144230769230769,
+   "cost": 0.00654804,
+   "per_dec": 3.148096153846154e-05,
+   "hi_cov": 0.4567307692307692,
+   "hi_dis": 0.23157894736842105,
+   "pred_button": 0.4025974025974026,
+   "keys": [
+    "choice",
+    "cost",
+    "decision_type",
+    "error",
+    "i",
+    "label",
+    "ms",
+    "p_max",
+    "probs",
+    "task_id"
+   ],
+   "jev_on_ok": 0.6753246753246753,
+   "maj_on_ok": 0.7337662337662337
+  }
+ }
+}

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.db
+reflex-report.html
+bench/data/
+.superpowers/
+.pytest_cache/
